@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,4 +14,5 @@ namespace BioCenas.Models
         public int QTProduto { get; set; }
 
     }
+  
 }
