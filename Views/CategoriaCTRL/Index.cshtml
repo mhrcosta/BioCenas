@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BioCenas.Models.CategoriaMDL>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DesignacaoCategoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoCategoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesignacaoCategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoCategoria)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID_Categoria">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID_Categoria">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID_Categoria">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

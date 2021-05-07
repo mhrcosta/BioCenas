@@ -1,0 +1,49 @@
+﻿@model BioCenas.Models.EncomendaMDL
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>EncomendaMDL</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID_Encomenda" />
+            <div class="form-group">
+                <label asp-for="ID_DescritivoEncomenda" class="control-label"></label>
+                <input asp-for="ID_DescritivoEncomenda" class="form-control" />
+                <span asp-validation-for="ID_DescritivoEncomenda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_Cliente" class="control-label"></label>
+                <input asp-for="ID_Cliente" class="form-control" />
+                <span asp-validation-for="ID_Cliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_LocalEntrega" class="control-label"></label>
+                <input asp-for="ID_LocalEntrega" class="form-control" />
+                <span asp-validation-for="ID_LocalEntrega" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataEntrega" class="control-label"></label>
+                <input asp-for="DataEntrega" class="form-control" />
+                <span asp-validation-for="DataEntrega" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BioCenas.Models.ProdutoMDL>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DesignacaoProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QTDisponivel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoProduto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesignacaoProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QTDisponivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecoProduto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID_Produto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID_Produto">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID_Produto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

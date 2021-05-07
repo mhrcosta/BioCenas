@@ -1,0 +1,53 @@
+﻿@model BioCenas.Models.ProdutoMDL
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ProdutoMDL</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DesignacaoProduto" class="control-label"></label>
+                <input asp-for="DesignacaoProduto" class="form-control" />
+                <span asp-validation-for="DesignacaoProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescricaoProduto" class="control-label"></label>
+                <input asp-for="DescricaoProduto" class="form-control" />
+                <span asp-validation-for="DescricaoProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QTDisponivel" class="control-label"></label>
+                <input asp-for="QTDisponivel" class="form-control" />
+                <span asp-validation-for="QTDisponivel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoProduto" class="control-label"></label>
+                <input asp-for="EstadoProduto" class="form-control" />
+                <span asp-validation-for="EstadoProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecoProduto" class="control-label"></label>
+                <input asp-for="PrecoProduto" class="form-control" />
+                <span asp-validation-for="PrecoProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,36 @@
+﻿@model BioCenas.Models.DescritivoEncomendaMDL
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DescritivoEncomendaMDL</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ID_Encomenda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ID_Encomenda)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ID_Produto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ID_Produto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QTProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QTProduto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DescritivoEncomenda">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
