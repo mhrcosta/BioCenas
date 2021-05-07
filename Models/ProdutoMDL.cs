@@ -11,6 +11,9 @@ namespace BioCenas.Models
         public string DesignacaoProduto { get; set; }
         public string DescricaoProduto { get; set; }
         public int QTDisponivel { get; set; }
+
+        /* Caso o produto tenha sido descontinuado ou deixou de ser vendido pela loja*/
+        public string EstadoProduto { get; set; }
         public int PrecoProduto { get; set; }
         
      

@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace BioCenas.Models
 {
-    public class MoradaUtilizadorMDL
+    public class UtilizadorRestricaoAlimentarMDL
     {
-        public int ID_MoradaUtilizador { get; set; }
-        public int ID_Morada { get; set; }
         public int ID_Utilizador { get; set; }
-
+        public int ID_RestricaoAlimentar { get; set; }
     }
 }
